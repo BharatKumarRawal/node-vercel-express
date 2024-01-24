@@ -1,0 +1,19 @@
+<header class="header">
+  <a href="/" class="header_logo">Bharat</a>
+  <nav class="header_nav">
+    <ul>
+      <li>
+        <a href="/" class="<%= isActiveRoute("/",currentRoute) %>">Home</a>
+      </li>
+      <li>
+        <a href="/about" class="<%= isActiveRoute("/about",currentRoute) %>">About</a>
+      </li>
+      <li>
+        <a href="/contact" class="">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="header_btn">
+    <button class="searchBtn" area-expanded="false">Search &#128269;</button>
+  </div>
+</header>

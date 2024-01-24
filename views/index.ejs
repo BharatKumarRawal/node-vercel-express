@@ -1,0 +1,32 @@
+<div class="author">
+  <h1 class="heading_autor">Hi, I am Bharat.</h1>
+  <p class="author_body">Web Developer and MERN Learner.</p>
+</div>
+<img
+  src="/img/heroImage.jpg"
+  alt="person looking out of window"
+  class="hero_image"
+  width="981px"
+  height="528px"
+/>
+
+<section class="articles">
+  <h2 class="articles_heading">Latest Posts</h2>
+
+  <ul class="article-ul">
+    <% data.forEach(post => { %>
+    <li>
+      <a href="/post/<%=post._id %> ">
+        <span> <%=post.title %> </span>
+        <span class="article_list-date"
+          ><%= post.createdAt.toDateString() %></span
+        >
+      </a>
+    </li>
+    <% }) %>
+  </ul>
+
+  <% if (nextPage !== null) { %>
+  <a href="/?page=<%= nextPage %>" class="pagination"> &lt; view older posts</a>
+  <% } %>
+</section>
